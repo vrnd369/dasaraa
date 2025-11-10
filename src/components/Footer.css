@@ -1,0 +1,131 @@
+/* Ensure the entire page uses full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* ==== FULL WIDTH FOOTER ==== */
+.site-footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #0f1117; /* Footer background color */
+  color: #e9ebf2; /* Light text for contrast */
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 18px;
+  padding-bottom: 20px; /* Added padding at the bottom for better spacing */
+  position: relative;
+  margin-top: auto; /* Ensures it pushes to the bottom */
+  box-sizing: border-box;
+}
+
+/* top brand row (optional) */
+.footer__brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #e9ebf2; /* Light text color */
+}
+
+.footer__logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.footer__name strong {
+  color: #ef6d3d; /* Retained the brand color */
+}
+
+/* grid */
+.footer__grid {
+  max-width: none; /* no max width – full bleed */
+  padding: 28px clamp(16px, 4vw, 28px) 14px;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* columns */
+.footer__heading {
+  margin: 0 0 10px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+}
+
+.footer__link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: #fff;
+}
+
+/* tagline + social */
+.footer__tagline {
+  color: #a6abc2; /* Muted color to fit the dark theme */
+  max-width: 42ch;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social__icon {
+  width: 18px;
+  height: 18px;
+  fill: #d9dbe6;
+}
+
+.social:hover .social__icon {
+  fill: #fff;
+}
+
+/* bottom bar */
+.footer__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px clamp(16px, 4vw, 28px) 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a6abc2; /* Muted color */
+}
+
+.heart {
+  color: #ef6d3d;
+}

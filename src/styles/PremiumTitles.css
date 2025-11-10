@@ -1,0 +1,206 @@
+/* ===== Premium Title System ===== */
+
+/* Base premium title styles */
+.premium-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* Size variants */
+.premium-title--xl {
+  font-size: clamp(48px, 8vw, 96px);
+}
+
+.premium-title--lg {
+  font-size: clamp(36px, 6vw, 72px);
+}
+
+.premium-title--md {
+  font-size: clamp(28px, 4.5vw, 56px);
+}
+
+/* Home Page - Hero Titles */
+.hero-title {
+  background: linear-gradient(135deg, #ff6b6b, #ffa726, #66bb6a, #42a5f5, #ab47bc);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s ease-in-out infinite;
+  text-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+}
+
+.hero-title::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 167, 38, 0.1), rgba(102, 187, 106, 0.1));
+  border-radius: 20px;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+/* About Page - Tradition & Pride */
+.about-title {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(139, 92, 246, 0.3);
+}
+
+/* Menu Page - Culinary Journey */
+.menu-title {
+  background: linear-gradient(135deg, #dc2626, #ea580c, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+  position: relative;
+}
+
+.menu-title::before {
+  content: '🍽️';
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6em;
+  animation: float 3s ease-in-out infinite;
+}
+
+.menu-title::after {
+  content: '✨';
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6em;
+  animation: float 3s ease-in-out infinite reverse;
+}
+
+/* Gallery Page - Visual Feast */
+.gallery-title {
+  background: linear-gradient(135deg, #059669, #0d9488, #0891b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 20px rgba(5, 150, 105, 0.4);
+  position: relative;
+}
+
+.gallery-title::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(45deg, rgba(5, 150, 105, 0.1), rgba(13, 148, 136, 0.1), rgba(8, 145, 178, 0.1));
+  border-radius: 25px;
+  z-index: -1;
+  filter: blur(15px);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Contact Page - Connection */
+.contact-title {
+  background: linear-gradient(135deg, #7c3aed, #c026d3, #db2777);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+  position: relative;
+}
+
+.contact-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #7c3aed, #c026d3);
+  border-radius: 50%;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #c026d3, #db2777);
+  border-radius: 50%;
+  animation: bounce 2s ease-in-out infinite reverse;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(-50%) translateY(0px); }
+  50% { transform: translateY(-50%) translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(-50%) translateY(0px); }
+  50% { transform: translateY(-50%) translateY(-8px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-title::before,
+  .menu-title::after {
+    display: none;
+  }
+  
+  .contact-title::before,
+  .contact-title::after {
+    display: none;
+  }
+}
+
+/* Enhanced text effects */
+.premium-title--glow {
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+.premium-title--shadow {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

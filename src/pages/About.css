@@ -1,0 +1,70 @@
+/* About Section Styling */
+.about-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-description {
+  font-size: 18px;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .about-title {
+    text-align: center;
+  }
+
+  .about-description {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
