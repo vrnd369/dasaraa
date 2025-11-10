@@ -44,7 +44,7 @@ export default function Contact() {
 
             <div className="field">
               <label htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="hello@dasarakitchens.in" required />
+              <input id="email" name="email" type="email" placeholder="Dasaraspice@gmail.com" required />
             </div>
 
             <div className="field">
