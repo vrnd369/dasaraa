@@ -90,8 +90,8 @@ export default function Footer() {
                 <a className="footer__link" href="tel:+18483920117">‎+1 (848) 392-0117</a>
               </li>
               <li>
-                <a className="footer__link" href="mailto:hello@dasarakitchens.in">
-                  hello@dasarakitchens.in
+                <a className="footer__link" href="mailto:Dasaraspice@gmail.com">
+                 Dasaraspice@gmail.com
                 </a>
               </li>
             </ul>
